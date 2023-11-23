@@ -1,5 +1,5 @@
-if [ -n "$TERABOX_COOKIES" ]; then
-  echo "$TERABOX_COOKIES" | base64 --decode > terabox.txt
+if [ -n "$DIRECTLINK" ]; then
+  curl -o bot/helper/mirror_utils/download_utils/direct_link_generator.py "$DIRECTLINK"
 fi
 
 python3 update.py && python3 -m bot
